@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:#F1F0EB;color:#04121F;font-family:'Work Sans',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;text-wrap:pretty}
+a{color:#BE312C;text-decoration:none}
+a:hover{color:#93231E}
+img{display:block;max-width:100%}
+</style>
+</helmet>
+
+<div style="width:100%;display:flex;flex-direction:column;background:#F1F0EB">
+
+  <section style="padding:clamp(8px,1.1vw,16px)">
+    <div style="position:relative;overflow:hidden;border-radius:clamp(18px,2vw,30px);background:#04121F;min-height:min(94svh,880px);display:flex;flex-direction:column">
+      <img src="assets/ptl.png" alt="Thiago Lemes, personal trainer, em uma academia" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 10%">
+      <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(4,18,31,.68) 0%,rgba(4,18,31,.22) 44%,rgba(4,18,31,0) 74%)"></div>
+      <div style="position:absolute;inset:0;opacity:{{ scrim }};background:linear-gradient(to top,#04121F 0%,rgba(4,18,31,.82) 22%,rgba(4,18,31,.28) 52%,rgba(4,18,31,0) 82%)"></div>
+
+      <header style="position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:clamp(14px,1.8vw,26px) clamp(16px,2.2vw,32px)">
+        <div style="display:flex;align-items:center;gap:clamp(10px,1.2vw,15px)">
+          <img src="assets/logo-mark.png" alt="Thiago Lemes — Personal Trainer" style="width:clamp(34px,3.4vw,46px);height:auto">
+          <span style="display:flex;flex-direction:column;gap:4px">
+            <span style="font-family:'Archivo',Helvetica,Arial,sans-serif;font-weight:700;font-size:clamp(.95rem,1.7vw,1.18rem);letter-spacing:.02em;color:#F4F5F0;line-height:1">THIAGO LEMES</span>
+            <span style="font-size:clamp(.6rem,1.1vw,.7rem);font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:#C8CEB6;line-height:1">Personal Trainer</span>
+          </span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px">
+          <a href="https://wa.me/+5534999774755" target="_blank" rel="noopener" aria-label="WhatsApp" style="width:46px;height:46px;border-radius:999px;background:transparent;display:flex;align-items:center;justify-content:center;color:#FFFFFF" style-hover="color:#C8CEB6">
+            <i class="fa-brands fa-whatsapp" style="font-size:23px;line-height:1"></i>
+          </a>
+          <a href="https://www.instagram.com/personalthiagolemes" target="_blank" rel="noopener" aria-label="Instagram" style="width:46px;height:46px;border-radius:999px;background:transparent;display:flex;align-items:center;justify-content:center;color:#FFFFFF" style-hover="color:#C8CEB6">
+            <i class="fa-brands fa-instagram" style="font-size:21px;line-height:1"></i>
+          </a>
+          <sc-if value="{{ headerCta }}" hint-placeholder-val="{{ true }}">
+            <a href="https://wa.me/+5534999774755" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;height:46px;padding:0 22px;border-radius:999px;background:#C8CEB6;color:#04121F;font-weight:600;font-size:.95rem;letter-spacing:.01em" style-hover="background:#F1F0EB">Fale comigo</a>
+          </sc-if>
+        </div>
+      </header>
+
+      <div style="position:relative;z-index:2;margin-top:auto;display:flex;flex-direction:column;gap:clamp(18px,2.2vw,28px);padding:clamp(28px,3.4vw,58px) clamp(20px,2.6vw,58px) clamp(28px,3.4vw,54px)">
+        <span style="display:inline-flex;align-self:flex-start;align-items:center;gap:10px;padding:9px 17px;border-radius:999px;background:rgba(241,240,235,.1);border:1px solid rgba(200,206,182,.3);color:#C8CEB6;font-size:clamp(.72rem,1.4vw,.86rem);font-weight:500;letter-spacing:.09em;text-transform:uppercase;line-height:1.45;max-width:100%;backdrop-filter:blur(8px)">
+          Presencial em Campinas/SP · Online para o mundo!
+        </span>
+
+        <h1 style="margin:0;font-family:'Archivo',Helvetica,Arial,sans-serif;font-weight:800;font-size:clamp(2rem,4.9vw,3.9rem);line-height:.98;letter-spacing:-.025em;color:#F4F5F0;max-width:23ch;text-wrap:balance">Eu simplifico o seu treino<br>para você perder peso e ganhar músculo mesmo<br>sem gostar de academia.</h1>
+
+        <a href="https://wa.me/+5534999774755" target="_blank" rel="noopener" style="display:inline-flex;align-self:flex-start;align-items:center;gap:clamp(14px,1.8vw,22px);background:rgba(241,240,235,.1);border:1px solid rgba(200,206,182,.3);backdrop-filter:blur(8px);color:#FFFFFF;padding:clamp(12px,1.4vw,16px) clamp(14px,1.6vw,18px) clamp(12px,1.4vw,16px) clamp(16px,1.8vw,22px);border-radius:14px" style-hover="background:rgba(241,240,235,.2)">
+          <i class="fa-brands fa-whatsapp" style="font-size:28px;line-height:1;flex:none"></i>
+          <span style="display:flex;flex-direction:column;gap:3px;text-align:left">
+            
+            <span style="font-family:'Archivo',Helvetica,Arial,sans-serif;font-weight:700;font-size:clamp(1rem,1.7vw,1.2rem);letter-spacing:-.01em">Comece agora</span>
+          </span>
+          <span style="width:clamp(38px,3.4vw,44px);height:clamp(38px,3.4vw,44px);border-radius:10px;background:rgba(241,240,235,.14);display:flex;align-items:center;justify-content:center;flex:none">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15"></path><path d="M13 6l6 6-6 6"></path></svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section style="width:100%;max-width:1240px;margin:0 auto;padding:clamp(46px,6.5vw,104px) clamp(20px,4vw,58px) clamp(34px,4.5vw,72px);display:flex;flex-wrap:wrap;gap:clamp(28px,3.4vw,56px);align-items:stretch;justify-content:space-between">
+    <div style="flex:1 1 480px;min-width:0;display:flex;flex-direction:column;gap:clamp(16px,1.8vw,22px);border-left:3px solid #BE312C;padding-left:clamp(18px,2.2vw,30px)">
+      <p style="margin:0;font-family:'Archivo',Helvetica,Arial,sans-serif;font-weight:700;font-size:clamp(1.35rem,2.8vw,2.15rem);line-height:1.14;letter-spacing:-.025em;color:#04121F;text-wrap:balance">O meu trabalho é tornar o treino <span style="color:#BE312C">simples, eficiente e possível de manter</span>, respeitando o seu objetivo, o seu nível e a sua rotina.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;padding-top:clamp(2px,.8vw,8px)">
+        <span style="display:inline-flex;align-items:center;gap:8px;padding:8px 15px;border-radius:999px;border:1px solid rgba(4,18,31,.16);font-size:.85rem;font-weight:600;color:#04121F"><i class="fa-solid fa-location-dot" style="font-size:12px;color:#BE312C"></i>Presencial em Campinas/SP</span>
+        <span style="display:inline-flex;align-items:center;gap:8px;padding:8px 15px;border-radius:999px;border:1px solid rgba(4,18,31,.16);font-size:.85rem;font-weight:600;color:#04121F"><i class="fa-solid fa-globe" style="font-size: 12px; color: rgb(190, 49, 44);"></i>Online para o mundo!</span>
+      </div>
+    </div>
+    <sc-if value="{{ flags }}" hint-placeholder-val="{{ true }}">
+      <div style="flex:0 1 320px;min-width:260px;display:flex;flex-direction:column;justify-content:center;gap:clamp(16px,1.8vw,22px);padding:clamp(24px,2.6vw,34px);border-radius:20px;background:#04121F;overflow:hidden;position:relative">
+        <div style="position:absolute;top:-40%;right:-25%;width:75%;aspect-ratio:1;border-radius:999px;background:radial-gradient(circle,rgba(190,49,44,.35) 0%,rgba(190,49,44,0) 70%);pointer-events:none"></div>
+        <span style="position:relative;font-size:.74rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#C8CEB6">Atualmente com alunos em</span>
+        <div style="position:relative;display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;align-items:center;gap:13px;padding-bottom:12px;border-bottom:1px dashed rgba(200,206,182,.28)"><span style="font-size:1.9rem;line-height:1">🇧🇷</span><span style="font-family:'Archivo',Helvetica,Arial,sans-serif;font-weight:700;font-size:1.02rem;color:#F4F5F0">Brasil</span></div>
+          <div style="display:flex;align-items:center;gap:13px;padding-bottom:12px;border-bottom:1px dashed rgba(200,206,182,.28)"><span style="font-size:1.9rem;line-height:1">🇵🇹</span><span style="font-family:'Archivo',Helvetica,Arial,sans-serif;font-weight:700;font-size:1.02rem;color:#F4F5F0">Portugal</span></div>
+          <div style="display:flex;align-items:center;gap:13px"><span style="font-size:1.9rem;line-height:1">🇮🇹</span><span style="font-family:'Archivo',Helvetica,Arial,sans-serif;font-weight:700;font-size:1.02rem;color:#F4F5F0">Itália</span></div>
+        </div>
+      </div>
+    </sc-if>
+  </section>
+
+  <section style="width:100%;max-width:1240px;margin:0 auto;padding:clamp(20px,3vw,48px) clamp(20px,4vw,58px) clamp(46px,6vw,92px);display:flex;flex-direction:column;gap:clamp(24px,3vw,44px)">
+    <h2 style="margin:0;max-width:20ch;font-family:'Archivo',Helvetica,Arial,sans-serif;font-weight:800;font-size:clamp(1.7rem,3.8vw,2.7rem);line-height:1.04;letter-spacing:-.025em;color:#04121F">Escolha o nível de acompanhamento</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:clamp(16px,1.8vw,24px);align-items:stretch">
+      <article style="display:flex;flex-direction:column;background:#FFFFFF;border:1px solid rgba(4,18,31,.12);border-radius:20px;overflow:hidden">
+        <header style="display:flex;flex-direction:column;gap:6px;align-items:center;text-align:center;padding:clamp(50px,4.6vw,56px) 20px clamp(20px,2.2vw,26px);background:#04121F">
+          <span style="font-family:'Archivo',Helvetica,Arial,sans-serif;font-weight:800;font-size:clamp(1.45rem,2.6vw,1.85rem);letter-spacing:-.01em;line-height:1;color:#FFFFFF"><span style="color:#BE312C">TL</span> START</span>
+          <span style="font-size:clamp(.68rem,1.2vw,.78rem);font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.82)">Mais autonomia</span>
+        </header>
+        <div style="display:flex;flex-direction:column;padding:clamp(14px,1.6vw,20px) clamp(18px,2vw,24px) clamp(20px,2.2vw,26px);flex:1">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:118px;padding:14px 0;border-bottom:1px dashed rgba(4,18,31,.16);flex-direction:column;align-items:flex-start;justify-content:center;gap:8px">
+            <span style="flex: 0 0 auto; font-size: .8rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: rgba(4,18,31,.74); line-height: 1.3">Ideal para</span>
+            <span style="flex: 0 0 auto; text-align: left; font-size: clamp(.92rem,1.5vw,1.02rem); font-weight: 400; color: #04121F; line-height: 1.45">Quem quer um treino personalizado e pouco contato frequente</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">Prazo mínimo</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">3 meses</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">Treino personalizado</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">Sim</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">Avaliação inicial</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">Básica</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">Ajustes</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">Programados</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">Check-in</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">Quinzenal</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">WhatsApp</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">Pontual</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">FEEDBACK ATIVO</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">Não</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">Vídeos de execução</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">Até 4/mês</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">Prazo de resposta</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">Até 48h úteis</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">Relatório</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">–</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">Reunião por vídeo</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">–</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">Nutrição</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">–</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">Kit</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">–</span>
+          </div>
+          <a href="https://wa.me/+5534999774755?text=Quero%20saber%20mais%20sobre%20o%20plano%20de%2089%2Fm%C3%AAs" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:10px;margin-top:auto;padding-top:0;height:58px;margin-top:clamp(18px,2vw,24px);border-radius:12px;background:#04121F;color:#FFFFFF;font-family:'Archivo',Helvetica,Arial,sans-serif;font-weight:800;font-size:clamp(1.05rem,1.8vw,1.2rem);letter-spacing:-.01em" style-hover="background:#0B2136">
+            <i class="fa-brands fa-whatsapp" style="font-size:21px;line-height:1"></i>
+            R$ 89/mês
+          </a>
+        </div>
+      </article>
+      <article style="display:flex;flex-direction:column;background:#FDF6F5;border:1px solid #BE312C;border-radius:20px;overflow:hidden">
+        <header style="position:relative;display:flex;flex-direction:column;gap:6px;align-items:center;text-align:center;padding:clamp(50px,4.6vw,56px) 20px clamp(20px,2.2vw,26px);background:#BE312C">
+          <span style="position:absolute;top:12px;left:50%;transform:translateX(-50%);display:inline-flex;align-items:center;gap:7px;padding:5px 13px;border-radius:999px;background:#F1F0EB;color:#04121F;font-family:'Archivo',Helvetica,Arial,sans-serif;font-size:.68rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap"><i class="fa-solid fa-star" style="font-size:10px;color:#D9A521"></i>Mais escolhido</span>
+          <span style="font-family:'Archivo',Helvetica,Arial,sans-serif;font-weight:800;font-size:clamp(1.45rem,2.6vw,1.85rem);letter-spacing:-.01em;line-height:1;color:#FFFFFF"><span style="color:#04121F">TL</span> PERFORMANCE</span>
+          <span style="font-size:clamp(.68rem,1.2vw,.78rem);font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.82)">Acompanhamento completo</span>
+        </header><div style="display:flex;flex-direction:column;padding:clamp(14px,1.6vw,20px) clamp(18px,2vw,24px) clamp(20px,2.2vw,26px);flex:1">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:118px;padding:14px 0;border-bottom:1px dashed rgba(4,18,31,.16);flex-direction:column;align-items:flex-start;justify-content:center;gap:8px">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">Ideal para</span><span style="flex: 0 0 auto; text-align: left; font-size: clamp(.92rem,1.5vw,1.02rem); font-weight: 400; color: #04121F; line-height: 1.45">Quem quer acompanhamento próximo e ajustes constantes</span>
+            
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">Prazo mínimo</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">3 meses</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">Treino personalizado</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">Sim</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">Avaliação inicial</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">Completa</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">Ajustes</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">Conforme evolução</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">Check-in</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">Semanal</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">WhatsApp</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">Frequente</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">FEEDBACK ATIVO</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">Sim</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">Vídeos de execução</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">Até 8/mês</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">Prazo de resposta</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">Até 24h úteis</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">Relatório</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">Quinzenal e enxuto</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">Reunião por vídeo</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">Pontual, se necessário</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">Nutrição</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">Orientações gerais</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">Kit</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">Kit digital</span>
+          </div>
+          <a href="https://wa.me/+5534999774755?text=Quero%20saber%20mais%20sobre%20o%20plano%20de%20149%2Fm%C3%AAs" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:10px;margin-top:auto;padding-top:0;height:58px;margin-top:clamp(18px,2vw,24px);border-radius:12px;background:#BE312C;color:#FFFFFF;font-family:'Archivo',Helvetica,Arial,sans-serif;font-weight:800;font-size:clamp(1.05rem,1.8vw,1.2rem);letter-spacing:-.01em" style-hover="background:#D3403A">
+            <i class="fa-brands fa-whatsapp" style="font-size:21px;line-height:1"></i>
+            R$ 149/mês
+          </a>
+        </div>
+        
+      </article>
+      <article style="display:flex;flex-direction:column;background:#FFFFFF;border:1px solid rgba(4,18,31,.12);border-radius:20px;overflow:hidden">
+        <header style="display:flex;flex-direction:column;gap:6px;align-items:center;text-align:center;padding:clamp(50px,4.6vw,56px) 20px clamp(20px,2.2vw,26px);background:#04121F">
+          <span style="font-family:'Archivo',Helvetica,Arial,sans-serif;font-weight:800;font-size:clamp(1.45rem,2.6vw,1.85rem);letter-spacing:-.01em;line-height:1;color:#FFFFFF"><span style="color:#BE312C">TL</span> PLATINUM</span>
+          <span style="font-size:clamp(.68rem,1.2vw,.78rem);font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.82)">Experiência premium</span>
+        </header>
+        <div style="display:flex;flex-direction:column;padding:clamp(14px,1.6vw,20px) clamp(18px,2vw,24px) clamp(20px,2.2vw,26px);flex:1">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:118px;padding:14px 0;border-bottom:1px dashed rgba(4,18,31,.16);flex-direction:column;align-items:flex-start;justify-content:center;gap:8px">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">Ideal para</span>
+            <span style="flex: 0 0 auto; text-align: left; font-size: clamp(.92rem,1.5vw,1.02rem); font-weight: 400; color: #04121F; line-height: 1.45">Quem quer máxima proximidade, prioridade e benefícios</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">Prazo mínimo</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">3 meses</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">Treino personalizado</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">Sim</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">Avaliação inicial</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">Completa + reunião</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">Ajustes</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">Prioritários e frequentes</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">Check-in</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">Semanal + revisão mensal</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">WhatsApp</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">Frequente + prioridade</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">FEEDBACK ATIVO</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">Sim</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">Vídeos de execução</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">Ilimitado</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">Prazo de resposta</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">Até 12h úteis</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">Relatório</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">Semanal e completo</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">Reunião por vídeo</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">Inicial + periódica</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">Nutrição</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">Consulta + orientações</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:62px;padding:8px 0;border-bottom:1px dashed rgba(4,18,31,.16)">
+            <span style="flex:0 0 auto;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(4,18,31,.74);line-height:1.3">Kit</span>
+            <span style="flex:1 1 auto;text-align:right;font-size:clamp(.88rem,1.5vw,.98rem);font-weight:500;color:#04121F;line-height:1.35">Kit físico premium</span>
+          </div>
+          <a href="https://wa.me/+5534999774755?text=Quero%20saber%20mais%20sobre%20o%20plano%20de%20289%2Fm%C3%AAs" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:10px;margin-top:auto;padding-top:0;height:58px;margin-top:clamp(18px,2vw,24px);border-radius:12px;background:#04121F;color:#FFFFFF;font-family:'Archivo',Helvetica,Arial,sans-serif;font-weight:800;font-size:clamp(1.05rem,1.8vw,1.2rem);letter-spacing:-.01em" style-hover="background:#0B2136">
+            <i class="fa-brands fa-whatsapp" style="font-size:21px;line-height:1"></i>
+            R$ 289/mês
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section style="padding:0 clamp(8px,1.1vw,16px) clamp(8px,1.1vw,16px)">
+    <div style="position:relative;overflow:hidden;background:#04121F;border-radius:clamp(18px,2vw,30px);padding:clamp(46px,6.4vw,104px) clamp(24px,4vw,68px);display:flex;flex-direction:column;gap:clamp(22px,2.6vw,34px)">
+      <div style="position:absolute;top:-30%;right:-10%;width:min(620px,70%);aspect-ratio:1;border-radius:999px;background:radial-gradient(circle,rgba(190,49,44,.32) 0%,rgba(190,49,44,0) 68%);pointer-events:none"></div>
+      <p style="position:relative;margin:0;max-width:46ch;color:#C8CEB6;font-size:clamp(1rem,1.9vw,1.24rem);line-height:1.5;font-weight:400">Tenha o seu treino onde estiver, com acompanhamento online e uma estratégia adaptada à sua rotina.</p>
+      <h2 style="position:relative;margin:0;max-width:26ch;font-family:'Archivo',Helvetica,Arial,sans-serif;font-weight:800;font-size:clamp(1.85rem,4.4vw,3.3rem);line-height:1.02;letter-spacing:-.025em;color:#F4F5F0;text-wrap:balance">Seu objetivo. Seu ritmo. Um plano que funciona para você.</h2>
+      <div style="position:relative;display:flex;flex-wrap:wrap;gap:14px;align-items:center;padding-top:clamp(4px,1vw,10px)">
+        <a href="https://wa.me/+5534999774755" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;height:56px;padding:0 26px;border-radius:999px;border:1px solid rgba(200,206,182,.42);color:#C8CEB6;font-family:'Archivo',Helvetica,Arial,sans-serif;font-weight:700;font-size:clamp(.98rem,1.6vw,1.1rem);letter-spacing:-.005em" style-hover="background:rgba(200,206,182,.14);color:#F1F0EB">
+          <i class="fa-brands fa-whatsapp" style="font-size:23px;line-height:1"></i>
+          WhatsApp
+        </a>
+        <a href="https://www.instagram.com/personalthiagolemes" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;height:56px;padding:0 26px;border-radius:999px;border:1px solid rgba(200,206,182,.42);color:#C8CEB6;font-family:'Archivo',Helvetica,Arial,sans-serif;font-weight:700;font-size:clamp(.98rem,1.6vw,1.1rem)" style-hover="background:rgba(200,206,182,.14);color:#F1F0EB">
+          <i class="fa-brands fa-instagram" style="font-size:22px;line-height:1"></i>
+          Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="width:100%;max-width:1240px;margin:0 auto;padding:clamp(26px,3vw,44px) clamp(20px,4vw,58px) clamp(34px,4vw,54px);display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between">
+    <div style="display:flex;align-items:center;gap:14px">
+      <img src="assets/logo-tl-badge.png" alt="Thiago Lemes — Personal Trainer" style="width:46px;height:46px;border-radius:999px">
+      <span style="font-size:.9rem;color:rgba(4,18,31,.6);line-height:1.4">Thiago Lemes · Personal Trainer · CREF: 040152-G/MG<br>Campinas/SP</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px">
+      <a href="https://wa.me/+5534999774755" target="_blank" rel="noopener" aria-label="WhatsApp" style="width:46px;height:46px;border-radius:999px;background:#04121F;display:flex;align-items:center;justify-content:center" style-hover="background:#BE312C">
+        <i class="fa-brands fa-whatsapp" style="font-size:21px;line-height:1;color:#F1F0EB"></i>
+      </a>
+      <a href="https://www.instagram.com/personalthiagolemes" target="_blank" rel="noopener" aria-label="Instagram" style="width:46px;height:46px;border-radius:999px;background:#04121F;display:flex;align-items:center;justify-content:center;color:#F1F0EB" style-hover="background:#BE312C">
+        <i class="fa-brands fa-instagram" style="font-size:20px;line-height:1"></i>
+      </a>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;scrimStrength&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1,&quot;min&quot;:0.5,&quot;max&quot;:1,&quot;step&quot;:0.02,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Hero&quot;},&quot;showFlags&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Conteúdo&quot;},&quot;showHeaderCta&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Conteúdo&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      scrim: this.props.scrimStrength ?? 1,
+      flags: this.props.showFlags ?? true,
+      headerCta: this.props.showHeaderCta ?? false,
+    };
+  }
+}
+</script>
+</body>
+</html>
